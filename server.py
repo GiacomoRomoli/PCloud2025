@@ -63,7 +63,7 @@ def add_data(s):
 
 @app.route('/sensors/<s>',methods=['GET'])
 def get_data(s):
-    db = "test"
+    db = "pcloud2025"
     db = firestore.Client.from_service_account_json('credentials.json', database=db)
     l = []
     for i in db.collections():
