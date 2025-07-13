@@ -12,6 +12,7 @@ def graph():
 
 @app.route('/sensors',methods=['GET']) #prendo i valori delle racolte presenti nel db e li restituisco in questo url
 def sensors():
+    #db = "test"
     db = "pcloud2025"
     db = firestore.Client.from_service_account_json('credentials.json', database=db)
     l = []
@@ -22,7 +23,8 @@ def sensors():
 
 @app.route('/sensors/<s>',methods=['POST'])
 def add_data(s):
-    db = "test"
+    #db = "test"
+    db = "pcloud2025"
     db = firestore.Client.from_service_account_json('credentials.json', database=db)
     date = request.values['date']
     road_name = request.values['road name']
@@ -63,6 +65,7 @@ def add_data(s):
 
 @app.route('/sensors/<s>',methods=['GET'])
 def get_data(s):
+    #db = "test"
     db = "pcloud2025"
     db = firestore.Client.from_service_account_json('credentials.json', database=db)
     l = []
