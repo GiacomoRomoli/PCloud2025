@@ -1,8 +1,8 @@
 from requests import get, post #librerie http per l'utilizzo di funzioni get e post
 import time
 
-base_url = 'http://localhost:80'
-#base_url = 'http://34.154.119.50:80'
+#base_url = 'http://localhost:80'
+base_url = 'http://34.154.119.50:80'
 with open('Banglore_traffic_Dataset_geocoded.csv') as f:
     for l in f.readlines()[1:]:
         date, area_name, road_name, traffic_volume, average_speed, travel_time_index, congestion_level, road_capacity_utilization, incident_reports, environmental_impact, public_transport_usage, traffic_signal_compliance, parking_usage, pedestran_and_cyclist_count, weather_conditions, roadwork_and_construction_activity, latitude, longitude = l.strip().split(',') #leggo solo i valori del csv
