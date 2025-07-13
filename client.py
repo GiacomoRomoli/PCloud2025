@@ -27,4 +27,4 @@ with open('Banglore_traffic_Dataset_geocoded.csv') as f:
                        'latitude': latitude,
                        'longitude': longitude}) #posto su questo url, questi valori (i dati dei documenti per ogni raccolta)
         #r = post(f'{base_url}/sensors/{area_name}', "\n")
-        time.sleep(1) #posto i valori ogni 10 secondi
+        time.sleep(10) #posto i valori ogni 10 secondi
